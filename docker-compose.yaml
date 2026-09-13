@@ -25,9 +25,9 @@ services:
     restart: always
     shm_size: 128mb
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: lab02-bandaorbegoso
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: { POSTGRES_DB }
     volumes:
       - lab02_pgdata:/var/lib/postgresql
 
